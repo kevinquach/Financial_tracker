@@ -16,6 +16,8 @@ CSV.foreach('transactions.csv', headers: true) do |row|
   puts "Amount: #{row[1]}"
   puts "Description: #{row[2]}"
   puts "Balance: #{@balance.round(2)}"
+  puts
+
 end
   #If balance < 0
     # Charge overdraft fee of 20.00
