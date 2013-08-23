@@ -25,6 +25,8 @@ CSV.foreach('transactions.csv', headers: true) do |row|
       @balance -= 20
       @balance_overdraft << @balance.round(2)
       @balance_overdraft << row[1]
+      @balance_overdraft << row[2]
+      @balance_overdraft << row[0]
     end
   print "Balance: #{@balance.round(2)}"
 
